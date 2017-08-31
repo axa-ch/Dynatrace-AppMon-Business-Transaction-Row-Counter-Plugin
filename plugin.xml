@@ -30,6 +30,7 @@
       <property key="dashboardOption" label="dashboardOption" type="list" description="What type of dashlet is the Dashboard displaying (Chart or Business Transaction)?" default="Chart">
         <list>
           <item value="Chart" />
+          <item value="Chart w/ splittings" />
           <item value="Business Transaction" />
         </list>
       </property>

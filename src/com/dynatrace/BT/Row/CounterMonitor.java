@@ -212,6 +212,8 @@ public class CounterMonitor implements Monitor {
 					else if (dashboardOption.equals("Chart")) //if counting from Chart
 						rowCount = (Double) xpath.evaluate("count(/dashboardreport/data/chartdashlet/measures/measure[not(contains(@measure, 'split by'))])",xmlDoc,XPathConstants.NUMBER);
 
+					else if (dashboardOption.equals("Chart w/ splittings")) //if counting from Chart w/ splittings
+						rowCount = (Double) xpath.evaluate("count(/dashboardreport/data/chartdashlet/measures/measure/measure[not(contains(@measure, 'split by'))])",xmlDoc,XPathConstants.NUMBER);
 					
 					log.fine("Entering collectStaticMetrics method");
 					
